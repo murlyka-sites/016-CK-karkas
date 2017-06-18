@@ -1,0 +1,159 @@
+doctype html
+html(lang="ru")
+	head
+		title CK karkas — Главная
+		include pug/meta/meta
+		include pug/meta/link
+		//- include pug/meta/test
+		style.
+			body {
+				/*background: url(../tests/glass/cat.jpg) center top;*/
+			}
+	body
+		include pug/blocks/header
+		include pug/blocks/nav
+		include pug/blocks/breadcrumbs
+		
+		.catalog-project: .container: .row
+			.col-xs-12
+				h2.text__h2.catalog-project__title проекты Домов
+				.catalog-project__filter: .project-filter
+					.project-filter__title Подбор по размеру
+					.project-filter__tags.filter-tags
+						.filter-tags__tag
+							| 4x4
+							input.hidden(type="checkbox")
+						.filter-tags__tag
+							| 5x4
+							input.hidden(type="checkbox")
+						.filter-tags__tag
+							| 5x5
+							input.hidden(type="checkbox")
+						.filter-tags__tag
+							| 6x4
+							input.hidden(type="checkbox")
+						.filter-tags__tag
+							| 6x5
+							input.hidden(type="checkbox")
+						.filter-tags__tag
+							| 6x6
+							input.hidden(type="checkbox")
+						.filter-tags__tag
+							| 7x6
+							input.hidden(type="checkbox")
+						.filter-tags__tag
+							| 7x7
+							input.hidden(type="checkbox")
+						.filter-tags__tag
+							| 8x6
+							input.hidden(type="checkbox")
+						.filter-tags__tag
+							| 8x7
+							input.hidden(type="checkbox")
+						.filter-tags__tag
+							| 8x8
+							input.hidden(type="checkbox")
+						.filter-tags__tag
+							| 9x8
+							input.hidden(type="checkbox")
+						.filter-tags__tag
+							| 10x10
+							input.hidden(type="checkbox")
+						.filter-tags__tag
+							| 10x11
+							input.hidden(type="checkbox")
+					.filter-settings
+						.filter-settings__grid
+							.filter-settings__column.filter-settings__column_type_range
+								.project-filter__title
+									| Цена
+								.filter-settings__fields
+									.filter-settings__range-fields-group
+										span.filter-settings__fields-text
+											| от
+										input.filter-settings__field.filter-settings__field_from(type="number", min="150000", max="2400600")
+									.filter-settings__range-fields-group
+										span.filter-settings__fields-text
+											| до
+										input.filter-settings__field.filter-settings__field_to(type="number", min="150000", max="2400600")
+								input.filter-settings__range(type="text" data-min="150000" data-max="2400600")
+							.filter-settings__column.filter-settings__column_type_range
+								.project-filter__title
+									| Площадь м
+									sup
+										| 2
+								.filter-settings__fields
+									.filter-settings__range-fields-group
+										span.filter-settings__fields-text
+											| от
+										input.filter-settings__field.filter-settings__field_from(type="number", min="35", max="250")
+									.filter-settings__range-fields-group
+										span.filter-settings__fields-text
+											| до
+										input.filter-settings__field.filter-settings__field_to(type="number", min="35", max="250")
+								input.filter-settings__range(type="text" data-min="35" data-max="250")
+
+							.filter-settings__column.filter-settings__column_type_checkbox
+								.project-filter__title
+									| Дополнительные параметры
+								.filter-settings__checkbox-grid
+									.filter-settings__checkbox-column
+										.filter-settings__checkbox-item
+											input.checkbox.filter-settings__checkbox(type="checkbox") 
+											| Эркер
+										.filter-settings__checkbox-item
+											input.checkbox.filter-settings__checkbox(type="checkbox") 
+											| Балкон
+									.filter-settings__checkbox-column
+										.filter-settings__checkbox-item
+											input.checkbox.filter-settings__checkbox(type="checkbox") 
+											| Мансарда
+										.filter-settings__checkbox-item
+											input.checkbox.filter-settings__checkbox(type="checkbox") 
+											| Санузел
+									.filter-settings__checkbox-column
+										.filter-settings__checkbox-item
+											input.checkbox.filter-settings__checkbox(type="checkbox") 
+											| Терраса
+										.filter-settings__checkbox-item
+											input.checkbox.filter-settings__checkbox(type="checkbox") 
+											| Вернанда
+			.col-xs-12: .row
+				include pug/blocks/project-all
+			.col-xs-12: a.button.button_type_link.button_theme_sun.button_size_sm.catalog-project__button(href="#") Посмотреть все проекты
+		hr.hr
+		.projects-article: .container: .row: .col-xs-12: article
+					h2.text__h2.projects-article__title
+						| оТЗЫВЫ НАШИХ КЛИЕНТОВ
+						
+					.article__text
+						p.projects-article__p
+							| Проект «В Брусе» объединяет собой несколько ключевых направлений работы группы компаний Новтехника, который позволяет строить частные дома по схеме «от производителя» — «под ключ» напрямую. Мы занимаемся профессиональным проектированием и строительством брусовых домов и бань и предоставлением сопутствующих услуг: производством профилированного бруса, установкой фундаментов, продажей печного оборудования, отделкой и благоустройством загородных участков.
+						h3.text__h3
+							| Комплексный подход позволяет:
+						ul.ul
+							li.ul__item
+								| ускорить процесс строительства,
+							li.ul__item
+								| сэкономить время на поиски подрядчика,
+							li.ul__item
+								| свести к минимуму общение с исполнителями,
+							li.ul__item
+								| сэкономить приличную сумму при строительстве.
+						p.projects-article__p
+							| С нами очень просто сотрудничать: оставляете заявку на эл. почте 
+							a.link_theme_forest(href="mailto:vbruserf@yandex.ru")
+								| vbruserf@yandex.ru
+							| , с вами связывается наш менеджер. Его задача — проконсультировать клиента по всем интересующим вопросам, подобрать подходящие варианты, согласовать проект, подготовить договор, принять оплату и сопровождать выполнение заказа вплоть до подписания акта приемки объекта.
+						p.projects-article__p
+							b
+								| Регионы строительства:
+							|  Москва (есть выставочная площадка), Санкт-Петербург (выставочная площадка), Великий Новгород (производство, магазины, выставочная площадка), остальные области Центрального и Северо-Западного регионов (выезжаем только на строительство, представительств нет).
+						p.projects-article__p
+							b
+								| Сроки строительства:
+							|  12-20 дней без выходных.
+		hr.hr
+		include pug/blocks/send
+		include pug/blocks/foo
+		include pug/meta/scripts

@@ -1,0 +1,6 @@
+.yo-rc.json
+html/
+libs/
+node_modules/
+prepros-6.config
+tests/

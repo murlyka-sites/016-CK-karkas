@@ -1,0 +1,108 @@
+.composition: .container: .row: .col-xs-12
+	h2.text__h2.composition__title КОМПЛЕКТАЦИЯ
+	.tabs-wrap
+		.visible-xs.visible-sm: i.fa.fa-exchange.fa-3x(data-toggle="tooltip" title="Подсказка: Чуть ниже находится панель вкладок, её можно скролить")
+		ul.composition__tabs.composition-tabs
+			li.composition-tabs__item.composition-tabs__item_active.active
+				a.composition-tabs__link(data-toggle="tab" href="#project-info-tab1")
+					| Размеры и площадь
+			li.composition-tabs__item
+				a.composition-tabs__link(data-toggle="tab" href="#project-info-tab2")
+					| Материалы
+			li.composition-tabs__item
+				a.composition-tabs__link(data-toggle="tab" href="#project-info-tab3")
+					| Отделка
+			li.composition-tabs__item
+				a.composition-tabs__link(data-toggle="tab" href="#project-info-tab4")
+					| Другое
+	.composition__content.tab-content
+		.tab-pane.fade.in.active#project-info-tab1
+			include composition-table
+		.tab-pane.fade.in#project-info-tab2
+			include composition-table
+		.tab-pane.fade.in#project-info-tab3
+			include composition-table
+		.tab-pane.fade.in#project-info-tab4
+			include composition-table
+	footer.comosition__foo
+		.composition__hash-tags.composition-hash-tags
+			.composition-hash-tags__title
+				| Проект относится к:
+			a.button.button_type_link.button_theme_hashtag.composition-hash-tags__tag(href="#")
+				| Дачные дома
+			a.button.button_type_link.button_theme_hashtag.composition-hash-tags__tag(href="#")
+				| Одноэтажные
+			a.button.button_type_link.button_theme_hashtag.composition-hash-tags__tag(href="#")
+				| Маленькие
+			a.button.button_type_link.button_theme_hashtag.composition-hash-tags__tag(href="#")
+				| Современный стиль
+		a.button.button_theme_sun.button_type_link.composition-table__btn(href="#")
+			| Получить бесплатную консультацию
+		
+//- 	.tab-content
+//- 		.tab-pane.fade.in.active#project-info-tab1
+//- 			ul.project-info__tab.project-tabs-table
+//- 				li.project-tabs-table__tab.active
+//- 					a.project-tabs-table__link(data-toggle="tab" href="#project-table-tab1")
+//- 						.project-tabs-table__name
+//- 							| Брус 90х140 мм.
+//- 						.project-tabs-table__price
+//- 							| 540 000 
+//- 							i.fa.fa-rub
+//- 				li.project-tabs-table__tab
+//- 					a.project-tabs-table__link(data-toggle="tab" href="#project-table-tab2")
+//- 						.project-tabs-table__name
+//- 							| Клееный брус
+//- 						.project-tabs-table__price
+//- 							| 740 000 
+//- 							i.fa.fa-rub
+//- 				li.project-tabs-table__tab
+//- 					a.project-tabs-table__link(data-toggle="tab" href="#project-table-tab3")
+//- 						.project-tabs-table__name
+//- 							| Каркасный вариант
+//- 						.project-tabs-table__price
+//- 							| 470 000 
+//- 							i.fa.fa-rub
+//- 				li.project-tabs-table__tab
+//- 					a.project-tabs-table__link(data-toggle="tab" href="#project-table-tab4")
+//- 						.project-tabs-table__name
+//- 							| Сухой брус
+//- 						.project-tabs-table__price
+//- 							| 680 000 
+//- 							i.fa.fa-rub
+//- 				li.project-tabs-table__tab
+//- 					a.project-tabs-table__link(data-toggle="tab" href="#project-table-tab5")
+//- 						.project-tabs-table__name
+//- 							| Брус из кедра
+//- 						.project-tabs-table__price
+//- 							| 920 000 
+//- 							i.fa.fa-rub
+//- 			.tab-content
+//- 				.tab-pane.fade.in.active#project-table-tab1
+//- 					//- +project-table()
+//- 					
+//- 				.tab-pane.fade#project-table-tab2
+//- 					//- +project-table()
+//- 				.tab-pane.fade#project-table-tab3
+//- 					//- +project-table()
+//- 				.tab-pane.fade#project-table-tab4
+//- 					//- +project-table()
+//- 				.tab-pane.fade#project-table-tab5
+//- 					//- +project-table()
+//- 		.tab-pane.fade#project-info-tab2
+//- 			//- include info-delivery.jade
+//- 		.tab-pane.fade#project-info-tab3
+//- 			| 3
+//- 		.tab-pane.fade#project-info-tab4
+//- 			| 4
+//- .project-info__tags.project-info-tags
+//- 	.project-info-tags__title
+//- 		| Проект относится к:
+//- 	a.btn.btn_theme_green.btn_type_info-tag.project-info-tags__tag
+//- 		| Дачные дома
+//- 	a.btn.btn_theme_green.btn_type_info-tag.project-info-tags__tag
+//- 		| Одноэтажные
+//- 	a.btn.btn_theme_green.btn_type_info-tag.project-info-tags__tag
+//- 		| Маленькие
+//- 	a.btn.btn_theme_green.btn_type_info-tag.project-info-tags__tag
+//- 		| Современный стиль

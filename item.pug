@@ -1,0 +1,71 @@
+doctype html
+html(lang="ru")
+	head
+		title CK karkas — Главная
+		include pug/meta/meta
+		include pug/meta/link
+		//- include pug/meta/test
+		style.
+			body {
+				/*background: url(../tests/glass/item.jpg) center top;*/
+			}
+	body
+	include pug/blocks/header
+	include pug/blocks/nav
+	include pug/blocks/breadcrumbs
+	.item: .container: .row 
+		.col-xs-12
+			h2.text__h2.item__title дОМ «аРХАНГЕЛЬСК»
+			p.item__slogan РАЗМЕР: 6Х9м, пЛОЩАДЬ: 99,75м
+				sup 2			
+		.col-xs-12.col-md-8
+			.item__gallery.item-gallery
+				.item-gallery__prs.moved
+					for item in [1,2,3,4,5]
+						div: a(href="images/item/1.jpg" data-fancybox="main-gallery"): img(src="images/item/1.jpg" width="785", height="547")
+				.item-gallery__grid
+					for item in [1,2,3,4,5,6,7,8]
+						a.fancy(href="images/item/1.jpg" data-fancybox="item-gallery").item-gallery__pr: img.img-responsive(src="images/item/1.jpg")
+				.item-gallery__grid.item-gallery__grid_more.hidden
+					for item in [1,2,3,4,5,6,7,8]
+						a(href="images/item/1.jpg" data-fancybox="item-gallery").item-gallery__pr: img.img-responsive(src="images/item/1.jpg")
+				button.item-gallery__more.button.button_type_button.button_theme_gallery-more.button_available(data-text="пОКАЗАТЬ БОЛЬШЕ ФОТОГРАФИЙ", data-toggle="Скрыть часть фотографий") пОКАЗАТЬ БОЛЬШЕ ФОТОГРАФИЙ
+		.col-xs-12.col-md-4
+			.item__plane.item-plane.moved
+				a(href="images/item/scheme.png" data-fancybox): img.item-plane__pr(src="images/item/scheme.png")
+			include pug/blocks/item-chars
+			include pug/blocks/item-price
+			.item__social.item__social
+				.item-social__title пОДЕЛИТЬСЯ В СОЦСЕТЯХ
+				include pug/blocks/item-social
+	include pug/blocks/composition
+	hr.hr
+	.item-desc: .container: .row: .col-xs-12: article
+				h2.text__h2.item-desc__title
+					| Описание проекта					
+				.item-desc__text
+					p.item-desc__p
+						| Современные деревянные дома и бани из бруса всё больше привлекают внимание дачников и хозяев загородных участков. Соответствие самым высоким требованиям безопасности, экологическая чистота материалов — то, что отличает деревянные дома и бани от любых других построек. Это, а также качество и долговечность, кстати говоря, недорогой недвижимости из бруса заставляет людей задуматься о её покупке. Дома и бани из бруса под ключ приобретают всё большую популярность. 
+					p.item-desc__p
+						| Наши проекты - это тёплые, уютные деревянные дома, которые становятся любимым местом отдыха дачников как летом, так и зимой, а бани из бруса — неотъемлемым атрибутом здорового и приятного образа жизни. Это, а также качество и долговечность, кстати говоря, недорогой недвижимости из бруса заставляет людей задуматься о её покупке. Дома и бани из бруса под ключ приобретают всё большую популярность. Наши проекты - это тёплые, уютные деревянные дома, которые становятся любимым местом отдыха дачников как летом, так и зимой, а бани из бруса — неотъемлемым атрибутом здорового и приятного образа жизни.
+	hr.hr
+	.similar-projects: .container: .row
+		.col-xs-12: h2.text__h2.similar-projects__title Аналогичные проекты
+		include pug/blocks/project-4
+	hr.hr
+	.articles: .container: .row
+		.col-xs-12: h2.text__h2.articles__title Статьи о строительстве
+		.col-xs-12: .row: .articles-slider
+			.articles-slider__item: figure.articles-item
+				a(href="#"): img.articles-item__pr(src="images/articles/1.jpg", width="", height="")
+				.articles-item__title: a(href="#") Ленточный фундамент
+			.articles-slider__item: figure.articles-item
+				a(href="#"): img.articles-item__pr(src="images/articles/2.jpg", width="", height="")
+				.articles-item__title: a(href="#") ПРоектирование объектов
+			.articles-slider__item: figure.articles-item
+				a(href="#"): img.articles-item__pr(src="images/articles/3.jpg", width="", height="")
+				.articles-item__title: a(href="#") Отделка домов и бань
+	hr.hr
+	include pug/blocks/send
+	include pug/blocks/foo
+	include pug/meta/scripts

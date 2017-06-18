@@ -1,0 +1,12 @@
+header.header: .container: .row
+  .col-xs-12.col-sm-7: img.header__logo(src="images/logo.png", width="349", height="151")
+  .col-xs-12.col-sm-5
+    .header__contacts.header-contacts
+      .header-contacts__city Ваш город 
+        a.header-contacts__city-name.link-dashed(href="#") Москва
+        | :
+        a.header-contacts__city-icon.link-icon(href="#"): svg.svg(width="11", height="11"): use(xlink:href="images/sprite.svg#refresh")
+      .header-contacts__phone 
+        span.header-contacts__phone-code 8 495 
+        span.header-contacts__phone-main 544-74-08
+      a.header-contacts__button.button.button_theme_call.button_type_link(href="#") Перезвоните мне

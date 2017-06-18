@@ -1,0 +1,29 @@
+{
+  "name": "CK karkas",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "Milok Murlyka (milok.murlika@yandex.ru)"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-stylus": "^5.0.7",
+    "jquery": "^3.2.1",
+    "slick-carousel": "^1.6.0",
+    "svg4everybody": "^2.1.7",
+    "ion.rangeSlider": "ion-range-slider#^2.1.7",
+    "jquery.form-styler": "jquery.formstyler#^1.7.8",
+    "fancybox": "^3.0.47",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "fontawesome#^4.7.0"
+  }
+}

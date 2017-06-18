@@ -1,0 +1,209 @@
+doctype html
+html(lang="ru")
+	head
+		title CK karkas — Главная
+		include pug/meta/meta
+		include pug/meta/link
+		//- include pug/meta/test
+		style.
+			body {
+				/*background: url(../tests/glass/index.jpg) center top;*/
+			}
+	body
+		include pug/blocks/header
+		include pug/blocks/nav
+		.main-banner: .container: .row: .col-xs-12: .main-banner__items
+			for item in [1, 2, 3]
+				.main-banner__item
+					.main-banner__bg(style="background-image: url(images/banner/bg.jpg)")
+					.main-banner__text
+						h2.main-banner__title
+							| Строительство домов
+							br
+							| С использованием
+						.main-banner__slogan
+							| МАТЕРИНСКОГО 
+							br
+							| КАПИТАЛА
+						a.button.button_type_link.button_theme_sun.button_size_sm(href="#") Посмотреть все проекты
+		.popular-project: .container: .row
+			.col-xs-12
+				h2.popular-project__title.text__h2 Популярные проекты
+				
+				.visible-xs.visible-sm: i.fa.fa-exchange.fa-3x(data-toggle="tooltip" title="Подсказка: Чуть ниже находится панель вкладок, её можно скролить")
+				.tabs-wrap.popular-project__tabs
+					ul.popular-project-tabs
+						li.popular-project-tabs__item.popular-project-tabs__item_active.active: a.popular-project-tabs__link(data-toggle="tab" href="#popular-tab1") Дома из бруса 
+						li.popular-project-tabs__item: a.popular-project-tabs__link(data-toggle="tab" href="#popular-tab2") Бани из бруса 
+						li.popular-project-tabs__item: a.popular-project-tabs__link(data-toggle="tab" href="#popular-tab3") Хоз. постройки
+						
+				.tab-content
+					.tab-pane.fade.in.active#popular-tab1
+						include pug/blocks/project-4
+					.tab-pane.fade#popular-tab2 Вкладка 2
+					.tab-pane.fade#popular-tab3 Вкладка 3
+		.banner.banner_1: .container: .row: .col-xs-12: .banner__container.banner__container_theme_green
+			.banner__inner
+				.banner__grid
+					.banner__column
+						h1.banner__title Строим дома под ключ
+						p.banner__slogan от фундамента до кровли
+					.banner__column
+						a.button.button_theme_white.button_type_link.banner__button(href="#") ПОДРОБНЕЕ
+		.aq: .container: .row
+			.col-xs-12.col-sm-7
+				.aq-author
+					.aq-author__container
+						.aq-author__pr
+							img(src="images/aq/author.jpg", width="110", height="110")
+						.aq-author__name Иванов Сергей
+						.aq-author__position Генеральный  директор
+						.aq-author__desc
+							p.aq-author__p Уважаемые заказчики! От имени компании «ТеремОК» уполномочен заверить вас, что наша команда – настоящие профессионалы своего дела. Мы никогда не срываем назначенных сроков строительства, указанных в договоре, и честно выполняем заказ.
+							p.aq-author__p Мы работаем только в ваших интересах, учитываем индивидуальные пожелания и финансовые возможности, строим быстро, качественно и надежно вне зависимости от сложности проекта, климатических условий и географии региона.
+							p.aq-author__p В нашем коллективе работают высококвалифицированные специалисты: архитекторы, инженеры, строители, менеджеры. Наш многолетний труд и большое число реализованных проектов получили признание среди россиян и расширили нашу клиентскую базу. Мы и впредь будем достойно и профессионально работать для вас и строить, что говорится, на века.
+			.col-xs-12.col-sm-5
+				section.aq-quest.aq__quest
+					h1.aq-quest__title Задать нам вопрос
+					p.aq-quest__slogan Наша строительная компания открывает новое направление в индивидуальном строительстве в нашей стране.
+					form
+						input.aq-form__field.field_size_sm.field_theme_brown.field_available(type="text", placeholder="Имя")
+						input.aq-form__field.field_size_sm.field_theme_brown.field_available(type="text", placeholder="Телефон")
+						textarea.aq-form__field.field_textarea-size_sm.field_theme_brown.field_available(placeholder="Сообщение")
+						button.button.button_type_button.button_theme_sun.button_size_sm.aq-form__button(href="#") Посмотреть все проекты
+						.aq-form__info 
+							b Ваши данные не будут переданы 3-м лицам
+							br
+							a.aq-form__conf.link_theme_rose(href="#") политика конфиденциальности
+		.edge: .container: .row
+			.col-xs-12
+				h2.text__h2.edge__title Преимущества работы с нами
+			.col-xs-12.col-sm-12.col-lg-2: .edge__column.edge__column_first
+				figure.edge__item.edge-item
+					.edge-item__icon
+						svg.svg(width="174", height="175"): use(xlink:href="images/sprite.svg#edge-3" width="174" height="175")
+					figcaption.edge-item__caption Опыт работы в строительстве домов более 15 лет
+			.col-xs-12.col-sm-4.col-lg-3: .edge__column
+				figure.edge__item.edge-item
+					.edge-item__icon
+						svg.svg(width="174", height="175"): use(xlink:href="images/sprite.svg#edge-1")
+					figcaption.edge-item__caption Собственное производство пиломатериалов
+						
+				figure.edge__item.edge-item
+					.edge-item__icon
+						svg.svg(width="174", height="175"): use(xlink:href="images/sprite.svg#edge-6")
+					figcaption.edge-item__caption Экологически чистые натуральные материалы
+			.col-xs-12.col-sm-4.col-lg-2: .edge__column
+				figure.edge__item.edge-item
+					.edge-item__icon
+						svg.svg(width="174", height="175"): use(xlink:href="images/sprite.svg#edge-4")
+					figcaption.edge-item__caption Любые изменения в комплектациях домов и бань
+			.col-xs-12.col-sm-4.col-lg-3: .edge__column
+				figure.edge__item.edge-item
+					.edge-item__icon
+						svg.svg(width="174", height="175"): use(xlink:href="images/sprite.svg#edge-2")
+					figcaption.edge-item__caption Команда квалифицированных строителей
+						
+				figure.edge__item.edge-item
+					.edge-item__icon
+						svg.svg(width="174", height="175"): use(xlink:href="images/sprite.svg#edge-7")
+					figcaption.edge-item__caption Контроль качества на всех этапах строительсвтва
+			.col-xs-12.col-sm-12.col-lg-2: .edge__column.edge__column_last
+				figure.edge__item.edge-item
+					.edge-item__icon
+						svg.svg(width="175", height="175"): use(xlink:href="images/sprite.svg#edge-5")
+					figcaption.edge-item__caption Идеальное соотношеие цена=качество
+		.reviews: .container: .row: .col-xs-12
+			h2.reviews__title.text__h2 Отзывы клиентов
+			.reviews__container
+				.reviews-prs.reviews__prs
+					for item in [1,2,3,4,5,6]
+						.reviews-prs__item: .reviews-prs__pr: img(src="images/reviews/1.jpg" width="109" height="109")
+				.reviews-comments
+					for item in [1,2,3,4,5,6]
+						.reviews-comments__item
+							.reviews-comments__name: b Иван Васильевич
+							.reviews-comments__rating: .rating: .rating__content(style="width: 80%;")
+							.reviews-comments__desc
+								p «Василёк-строй» – это компания, которую наша семья с легким сердцем рекомендует близким и друзьям. Убедившись в профессионализме всех членов этой команды: от директора до строителя, мы всем советуем строить дома из бруса только с ними. Дом мы получили просто превосходный, строили из зимнего леса, были учтены все наши пожелания по планировке и отделке, кое-что мы решили изменить (фундамент и кровлю), условия договора соблюдены до последней буквы. Довольны. Потому и рекомендуем всем.
+							.reviews-comments__project: b Дом  по проекту «Парижанин»
+							.reviews-comments__address п. Борисовка, Московская область.
+		.banner.banner_2: .container: .row: .col-xs-12: .banner__container.banner__container_theme_red
+			.banner__inner
+						h1.banner__title пластиковые окна в подарок
+						p.banner__slogan при заказе дома до 28.02.2017
+		hr.hr
+		.gallery: .container: .row: .col-xs-12
+			h2.text__h2.gallery__title Нами построено
+			ul.gallery__tabs.gallery-tabs
+				li.gallery-tabs__item: a.gallery-tabs__link.gallery-tabs__link_active Дома из бруса
+				li.gallery-tabs__item: a.gallery-tabs__link Дачные дома
+				li.gallery-tabs__item: a.gallery-tabs__link Коттеджи
+				li.gallery-tabs__item: a.gallery-tabs__link Бани из бруса
+				li.gallery-tabs__item: a.gallery-tabs__link Перевозные бани
+			.gallery__items
+				figure.gallery-item.gallery__item
+					.gallery-item__pr
+						img(src="images/gallery/1.jpg", width="350", height="300")
+						.gallery-item-overlay
+							.gallery-item-overlay__icon: svg.svg(width="55", height="56"): use(xlink:href="images/sprite.svg#loupe")
+							a.button.button_type_link.button_theme_gallery(href="#") Перейти в галерею
+					
+					figcaption.gallery-item__caption
+						.gallery-item__name Дом из бруса 6х6 под ключ
+						.gallery-item__address Московская область, Руза					
+				figure.gallery-item.gallery__item
+					.gallery-item__pr
+						img(src="images/gallery/2.jpg", width="350", height="300")
+						.gallery-item-overlay
+							.gallery-item-overlay__icon: svg.svg(width="55", height="56"): use(xlink:href="images/sprite.svg#loupe")
+							a.button.button_type_link.button_theme_gallery(href="#") Перейти в галерею
+							
+					figcaption.gallery-item__caption
+						.gallery-item__name Дом из бруса 6х6 под ключ
+						.gallery-item__address Московская область, Руза
+						
+				figure.gallery-item.gallery__item
+					.gallery-item__pr
+						img(src="images/gallery/3.jpg", width="350", height="300")
+						.gallery-item-overlay
+							.gallery-item-overlay__icon: svg.svg(width="55", height="56"): use(xlink:href="images/sprite.svg#loupe")
+							a.button.button_type_link.button_theme_gallery(href="#") Перейти в галерею
+					
+					figcaption.gallery-item__caption
+						.gallery-item__name Дом из бруса 6х6 под ключ
+						.gallery-item__address Московская область, Руза
+						
+				figure.gallery-item.gallery__item
+					.gallery-item__pr
+						img(src="images/gallery/1.jpg", width="350", height="300")
+						.gallery-item-overlay
+							.gallery-item-overlay__icon: svg.svg(width="55", height="56"): use(xlink:href="images/sprite.svg#loupe")
+							a.button.button_type_link.button_theme_gallery(href="#") Перейти в галерею
+					figcaption.gallery-item__caption
+						.gallery-item__name Дом из бруса 6х6 под ключ
+						.gallery-item__address Московская область, Руза
+	
+				figure.gallery-item.gallery__item
+					.gallery-item__pr
+						img(src="images/gallery/2.jpg", width="350", height="300")
+						.gallery-item-overlay
+							.gallery-item-overlay__icon: svg.svg(width="55", height="56"): use(xlink:href="images/sprite.svg#loupe")
+							a.button.button_type_link.button_theme_gallery(href="#") Перейти в галерею
+					figcaption.gallery-item__caption
+						.gallery-item__name Дом из бруса 6х6 под ключ
+						.gallery-item__address Московская область, Руза
+	
+				figure.gallery-item.gallery__item
+					.gallery-item__pr
+						img(src="images/gallery/3.jpg", width="350", height="300")
+						.gallery-item-overlay
+							.gallery-item-overlay__icon: svg.svg(width="55", height="56"): use(xlink:href="images/sprite.svg#loupe")
+							a.button.button_type_link.button_theme_gallery(href="#") Перейти в галерею
+					figcaption.gallery-item__caption
+						.gallery-item__name Дом из бруса 6х6 под ключ
+						.gallery-item__address Московская область, Руза
+			a.button.button_type_link.button_theme_sun.button_size_sm(href="#") Посмотреть все проекты
+		include pug/blocks/foo
+						
+		include pug/meta/scripts
